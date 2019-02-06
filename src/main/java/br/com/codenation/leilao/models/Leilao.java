@@ -8,9 +8,16 @@ public class Leilao {
 
 	private String descricao;
 	private List<Lance> lances;
-	
+	private double valorInicial;
+
 	public Leilao(String descricao) {
 		this.descricao = descricao;
+		this.lances = new ArrayList<Lance>();
+	}
+
+	public Leilao(String descricao, double valorInicial) {
+		this.descricao = descricao;
+		this.valorInicial = valorInicial;
 		this.lances = new ArrayList<Lance>();
 	}
 	
@@ -26,6 +33,15 @@ public class Leilao {
 		return Collections.unmodifiableList(lances);
 	}
 
-	
-	
+	public void setLances(List<Lance> lances) {
+		this.lances = lances;
+	}
+
+	public double getValorInicial() {
+		return valorInicial;
+	}
+
+	public void setValorInicial(double valorInicial) {
+		this.valorInicial = valorInicial;
+	}
 }
